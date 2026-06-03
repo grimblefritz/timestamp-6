@@ -1,0 +1,5 @@
+# ts6 — public/ is the deployable git repo. Keep it clean.
+# (local/ is a separate, never-distributed tree and is not part of this repo.)
+__pycache__/
+*.pyc
+.DS_Store
