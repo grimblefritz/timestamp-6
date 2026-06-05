@@ -20,9 +20,8 @@
 <meta name="twitter:title" content="ts6 — fourteen characters in, six out">
 <meta name="twitter:description" content="A compact 14&rarr;6 timestamp codec. URL-safe, chronologically sortable, four byte-identical languages. MIT-licensed.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Familjen+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- fonts are self-hosted (no third-party requests) — see local/scripts/fetch-fonts.py -->
+<link rel="stylesheet" href="fonts/fonts.css">
 
 <script type="application/ld+json">
 {
@@ -256,6 +255,12 @@ table.grid .fld{font-weight:600}
 .clone{font-family:"IBM Plex Mono",monospace; font-size:13.5px; background:#0b0e14; border:1px solid var(--line); border-radius:12px; padding:14px 16px; color:var(--dim); display:flex; align-items:center; gap:12px; overflow-x:auto}
 .clone .p{color:var(--f-d)}
 .parity-note{margin-top:18px; color:var(--faint); font-size:14px; max-width:64ch}
+.dl-docs{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:22px}
+.doc-pill{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:11px 16px; display:inline-flex; align-items:center; gap:9px; transition:.18s}
+.doc-pill:hover{border-color:var(--gold); transform:translateY(-2px)}
+.doc-pill.ghost{color:var(--dim)}
+.doc-pill .ar{color:var(--gold); transition:transform .18s ease}
+.doc-pill:hover .ar{transform:translateX(3px)}
 
 /* footer */
 footer{border-top:1px solid var(--line2); padding:40px 0 64px; margin-top:20px}
@@ -511,7 +516,7 @@ ts6.decode(<span class="s">'1F3kg0'</span>);          <span class="c">// '202606
 
     <div class="dl-top">
       <a class="dl-card" href="ts6.zip"><span><span class="l">ts6.zip</span><br><span class="s">all four + README + LICENSE</span></span><span class="ar">&darr;</span></a>
-      <a class="dl-card" href="ts6.tgz"><span><span class="l">ts6.tgz</span><br><span class="s">all four, gzipped tarball</span></span><span class="ar">&darr;</span></a>
+      <a class="dl-card" href="ts6.tgz"><span><span class="l">ts6.tgz</span><br><span class="s">all four + README + LICENSE, gzipped</span></span><span class="ar">&darr;</span></a>
     </div>
 
     <div class="dl-langs">
@@ -519,6 +524,12 @@ ts6.decode(<span class="s">'1F3kg0'</span>);          <span class="c">// '202606
       <a class="dl-lang" href="ts6.py"><div class="f">ts6.py</div><div class="t">Python</div></a>
       <a class="dl-lang" href="ts6.js"><div class="f">ts6.js</div><div class="t">JavaScript</div></a>
       <a class="dl-lang" href="ts6.sh"><div class="f">ts6.sh</div><div class="t">bash</div></a>
+    </div>
+
+    <div class="dl-docs">
+      <a class="doc-pill" href="readme.html">Read the docs <span class="ar">&rarr;</span></a>
+      <a class="doc-pill ghost" href="README.md" download>README.md</a>
+      <a class="doc-pill ghost" href="LICENSE" download>LICENSE</a>
     </div>
 
     <div class="clone"><span class="p">git clone</span> https://github.com/grimblefritz/timestamp-six.git</div>
@@ -531,6 +542,7 @@ ts6.decode(<span class="s">'1F3kg0'</span>);          <span class="c">// '202606
   <div class="wrap foot">
     <span>timestamp-six &mdash; <span id="ver" class="v">ts6</span></span>
     <span>MIT licensed &middot; &copy; 2026 <a href="mailto:info@smisco.biz">smisco</a></span>
+    <span><a href="privacy.html">privacy</a> &middot; <a href="terms.html">terms</a></span>
     <span><a href="https://github.com/grimblefritz/timestamp-six">github</a> &middot; <a href="https://smisco.biz/ts6/">smisco.biz/ts6</a></span>
   </div>
 </footer>
